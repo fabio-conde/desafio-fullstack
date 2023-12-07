@@ -9,24 +9,25 @@
  **/
 
   function canReachEnd(input){
-    if (input.length){
-      //console.log(`Total de casas: ${input.length}`)      
-      total = input.length - 1;
-      position = 0;
-      
-      while(position < total){
-        //console.log(`Casa ${position} e valor ${input[position]}, pula para a casa ${position + input[position]}`)
-        if(input[position] === 0){
-          //console.log("achou 0 antes da ultima casa")
-          return false;  
-        }
-        position += input[position];
-      }      
+    if (!input.length){
+      return "0 0";
+    }
+    
+    //console.log(`Total de casas: ${input.length}`)      
+    total = input.length - 1;
+    position = 0;
+    
+    while(position < total){
+      //console.log(`Casa ${position} e valor ${input[position]}, pula para a casa ${position + input[position]}`)
+      if(input[position] === 0){
+        //console.log("achou 0 antes da ultima casa")
+        return false;  
+      }
+      position += input[position];
 
       return true;
 
-    }
-    
+    }    
   }
   
   
