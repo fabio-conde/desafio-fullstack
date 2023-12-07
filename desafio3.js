@@ -24,10 +24,10 @@
         return false;  
       }
       position += input[position];
+    }  
 
-      return true;
-
-    }    
+    return true;
+    
   }
   
   
